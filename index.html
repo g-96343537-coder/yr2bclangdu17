@@ -7,7 +7,7 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     :root{ 
-        --bg: #f0fdf9; /* 森林淡绿背景 */
+        --bg: #f0fdf9; /* 备用背景色 */
         --card: #ffffff; 
         --accent: #059669; /* 森林绿强调色 */
         --accent-dark: #064e3b;
@@ -22,7 +22,15 @@
         margin: 0;
         font-family: "PingFang SC", "Microsoft YaHei", "Nunito", sans-serif;
         background-color: var(--bg);
-        background-image: radial-gradient(circle at 10% 20%, rgb(209, 250, 229) 0%, rgb(236, 253, 245) 90%);
+        
+        /* --- 修改处：设置新的背景图 --- */
+        background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/10/Childrens-Backgrounds-Desktop.jpg');
+        background-size: cover;       /* 铺满屏幕 */
+        background-position: center;  /* 居中显示 */
+        background-attachment: fixed; /* 背景固定不随滚动条滚动 */
+        background-repeat: no-repeat;
+        /* --------------------------- */
+
         color: var(--text-main);
         height: 100vh;
         overflow-x: hidden;
@@ -286,10 +294,10 @@
   </style>
 
   <script>
-    // Web App URL (GAS)
-    const GAS_URL = "https://script.google.com/macros/s/AKfycbxmYyVnw2QR0eH-IlwkPmu2zhFlz8zy39fZy721l7Hw0jsDFVdDrLg2XU4GGwAkQpIz/exec";
+    // Web App URL (GAS) - 修改处：已更新
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbzM5bMD3Bf4oBMl13GjRlsLnMiuQiOg4ZyJvQWubbW5fHSo70B5XAzUV6KtRjvKglB8tQ/exec";
     
-    // ⚠️ 课文内容：动物的心声 (已替换)
+    // ⚠️ 课文内容：动物的心声
     const sentences = [
       "我全身圆滚滚、眼睛大又圆，人人都说我很可爱。可爱，不一定被爱！人类开发竹林后，我和家人常常找不到住所，找不到食物，还要被他们捕猎呢！",
       "我的头部短而圆，眼睛小，不像熊猫那么可爱。人类认为我全身都是宝，不断追捕我，所以我最怕人类！",
@@ -438,4 +446,5 @@
     };
   </script>
 </body>
+
 </html>
